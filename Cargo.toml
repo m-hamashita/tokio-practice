@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.75"
+anyhow = {version = "1.0.75", features = ["backtrace"]}
 rayon = "1.8.0"
-tokio = "1.32.0"
+rstest = "0.18.2"
+tokio = { version = "1.32.0", features = ["rt", "rt-multi-thread", "macros", "fs", "signal", "time", "sync"] }
